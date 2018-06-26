@@ -4,16 +4,11 @@ class CyclicLR(Callback):
     """This callback implements a cyclical learning rate policy (CLR).
     The method cycles the learning rate between two boundaries with
     some constant frequency, as detailed in this paper (https://arxiv.org/abs/1506.01186).
-    The amplitude of the cycle can be scaled on a per-iteration or 
-    per-cycle basis.
+    The amplitude of the cycle can be scaled on a per-iteration or per-cycle basis.
     This class has three built-in policies, as put forth in the paper.
-    "triangular":
-        A basic triangular cycle w/ no amplitude scaling.
-    "triangular2":
-        A basic triangular cycle that scales initial amplitude by half each cycle.
-    "exp_range":
-        A cycle that scales initial amplitude by gamma**(cycle iterations) at each 
-        cycle iteration.
+    "triangular":  A basic triangular cycle w/ no amplitude scaling.
+    "triangular2": A basic triangular cycle that scales initial amplitude by half each cycle.
+    "exp_range":   A cycle that scales initial amplitude by gamma**(cycle iterations) at each cycle iteration.
     For more detail, please see paper.
     
     # Example
